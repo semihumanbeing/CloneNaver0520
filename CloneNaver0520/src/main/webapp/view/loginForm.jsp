@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<div id = wrap>
+<header></header>
+<div id=content></div>
+<div id=footer></div>
+</div>
 </body>
 </html>

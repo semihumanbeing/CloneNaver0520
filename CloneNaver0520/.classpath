@@ -13,6 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="C:/Work/cloneNaver0520/ojdbc14.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Work/cloneNaver0520/CloneNaver0520/src/main/webapp/WEB-INF/lib/ojdbc14.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
