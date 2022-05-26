@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class LoginAction
  */
-@WebServlet("/view/loginForm.do")
+@WebServlet("/view/loginAction.do")
 public class LoginAction extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

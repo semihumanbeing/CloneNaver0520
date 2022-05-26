@@ -31,7 +31,7 @@ public class MemberDAO {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public List<MemberVO> selectList() {
+	public List<MemberVO> selectList() { //전체 멤버조회
 
 		List<MemberVO> list = new ArrayList<MemberVO>();
 
