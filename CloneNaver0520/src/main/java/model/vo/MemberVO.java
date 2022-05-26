@@ -9,7 +9,14 @@ public class MemberVO {
 	String gender;
 	String birthday;
 	
-	
+	public MemberVO() {
+		super();
+	}
+	public MemberVO(String id, String pwd) {
+		super();
+		this.id = id;
+		this.pwd = pwd;
+	}
 	public String getId() {
 		return id;
 	}
