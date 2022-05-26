@@ -32,10 +32,10 @@
 			</div>
 		</form>
 		<div id="main">
-			<a href="loginForm.jsp"><img src="../img/login.png" width="300px"></a>
+			<a href="loginForm.do"><img src="../img/login.png" width="300px"></a>
 		</div>
 		<div id="signup">
-			<a href="signupForm.jsp">회원가입</a>
+			<a href="signupForm.do">회원가입</a>
 		</div>
 	</div>
 </body>

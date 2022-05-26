@@ -31,6 +31,87 @@ public class MemberDAO {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public MemberVO checkUserInfo(String idCheck, String pwdCheck) { // 로그인시 유저정보확인
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet result = null;
+		MemberVO setVo = null;
+		
+		String sql = "select id, pwd from userinfo where id =? and pwd =?";
+		
+		try {
+			conn = DBService.getInstance().getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, idCheck);
+			pstmt.setString(2, pwdCheck);
+			
+			result = pstmt.executeQuery();
+			
+			if(result.next()) {
+				String id = result.getString("id");
+				String pwd = result.getString("pwd");
+				setVo = new MemberVO();
+				
+				setVo.setId(id);
+				setVo.setPwd(pwd);
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			try {
+				if(result != null) {
+					result.close();
+				} if (pstmt != null) {
+					pstmt.close();
+				} if(conn != null) {
+					conn.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return setVo;
+	}
+	
+	public int insertMember(MemberVO vo) { // 회원가입시 유저목록입력
+		Connection connection = null;
+		PreparedStatement pstmt = null;
+		int rs = 0;
+		String sql = "insert into userinfo values(?,?,?,?,?,?)";
+
+		try {
+			connection = DBService.getInstance().getConnection();
+			pstmt = connection.prepareStatement(sql);
+			
+			pstmt.setString(1, vo.getId());
+			pstmt.setString(2, vo.getPwd());
+			pstmt.setString(3, vo.getName());
+			pstmt.setString(4, vo.getTel());
+			pstmt.setString(5, vo.getGender());
+			pstmt.setString(6, vo.getBirthday());
+			
+			rs = pstmt.executeUpdate();
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+				connection.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return rs;
+
+	}
+	
 	public List<MemberVO> selectList() { //전체 멤버조회
 
 		List<MemberVO> list = new ArrayList<MemberVO>();

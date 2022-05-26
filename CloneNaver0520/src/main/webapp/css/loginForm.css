@@ -29,10 +29,14 @@
 	
 }
 
-#btn {
+#btn > button{
 	margin-top: 20px;
+	border: none;
+	background-color: rgba(0,0,0,0);
 }
 
-#btn:hover {
+
+#btn> button:hover {
 	opacity: 0.9;
+	cursor:pointer;
 }

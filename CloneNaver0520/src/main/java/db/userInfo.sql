@@ -14,3 +14,5 @@ create table userInfo (
 insert into USERINFO values('asdf','qwerty','홍길동','010-1234-5555','남자','1996-03-12');
 
 select * from userinfo
+
+select id, pwd from userinfo where id = 'asdf' and pwd = 'qwerty'
