@@ -11,19 +11,19 @@
 		let id = f.id.value.trim();
 		let pwd = f.pwd.value.trim();
 
-		if(id==''){
+		if (id == '') {
 			alert('아이디는 필수입력입니다.');
 			f.id.focus();
 			return;
 		}
-		if(pwd==''){
+		if (pwd == '') {
 			alert('비밀번호는 필수입력입니다.');
 			f.pwd.focus();
 			return;
 		}
-		
-		f.method="GET";
-		f.action="login.do"
+
+		f.method = "GET";
+		f.action = "login.do"
 		f.submit();
 
 	}
@@ -47,6 +47,7 @@
 				</button>
 			</div>
 		</form>
+		
 	</div>
 </body>
 </html>
