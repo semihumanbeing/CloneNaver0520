@@ -1,21 +1,20 @@
 package model.vo;
 
-public class MemberVO {
+public class KakaoVO {
 	
 	String id;
-	String pwd;
-	String name;
-	String tel;
+	String nickname;
 	String gender;
 	String birthday;
 	
-	public MemberVO() {
+	
+	
+	public KakaoVO() {
 		super();
 	}
-	public MemberVO(String id, String pwd) {
+	public KakaoVO(String id) {
 		super();
 		this.id = id;
-		this.pwd = pwd;
 	}
 	public String getId() {
 		return id;
@@ -23,23 +22,11 @@ public class MemberVO {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPwd() {
-		return pwd;
+	public String getNickname() {
+		return nickname;
 	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getTel() {
-		return tel;
-	}
-	public void setTel(String tel) {
-		this.tel = tel;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 	public String getGender() {
 		return gender;
@@ -53,6 +40,7 @@ public class MemberVO {
 	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
-
+	
+	
 
 }
