@@ -1,0 +1,77 @@
+@charset "EUC-KR";
+
+	#logo{
+	
+	margin-left: 150px;
+	
+	}
+	
+	
+	#wrap{
+	margin-left: 100px;
+	width: 600px;
+	margin: auto;
+	margin-top: 200px;
+	align-content: center;
+	clear: both;
+	}
+	
+	
+	#title{
+	
+		text-align: center;
+	}
+	
+	#box{
+			width: 500x350px;
+			margin: auto;
+			margin-top: 50px;
+		    background-color:white;
+		    text-align: center;
+		
+		}
+	#head {
+	    display: none;
+	}
+	
+	#li {
+	
+		list-style: none;
+	
+	}
+	
+	.login {
+		text-align: center;
+		font-size: 70px;
+		font: ±¼¸²Ã¼;
+		color: #444;
+		font-weight: bolder;
+		
+	}
+	
+	.btn-group {
+		margin-right: 150px;
+		border-top-right-radius: 5px; 
+		border-bottom-right-radius : 5px;
+		margin-top: 70px;
+		text-align: center;
+		border-style: none;
+		border-bottom-right-radius: 5px;
+		width : 50px;
+		height : 50px;
+		display: inline-flex;
+		
+	}
+
+	#button1{
+	
+		margin-right: 20px;
+	
+	}
+	/* 
+	#button2{
+	
+		margin-left: 30px;
+	
+	}
+ */
