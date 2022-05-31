@@ -28,6 +28,7 @@ public class MemberViewAction extends HttpServlet {
 		
 		request.setAttribute("list", list);
 		
+		
 		RequestDispatcher disp = request.getRequestDispatcher("memberList.jsp");
 		disp.forward(request, response);
 		
