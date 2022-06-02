@@ -24,7 +24,7 @@ public class SignupFormAction extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		//forward
-		String forward_page = "";
+		String forward_page = "signupForm.jsp";
 		RequestDispatcher disp = request.getRequestDispatcher(forward_page);
 		disp.forward(request, response);
 

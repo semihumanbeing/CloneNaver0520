@@ -12,6 +12,23 @@ public class MemberVO {
 	public MemberVO() {
 		super();
 	}
+	
+	
+	
+	
+	public MemberVO(String id, String pwd, String name, String tel, String gender, String birthday) {
+		super();
+		this.id = id;
+		this.pwd = pwd;
+		this.name = name;
+		this.tel = tel;
+		this.gender = gender;
+		this.birthday = birthday;
+	}
+
+
+
+
 	public MemberVO(String id, String pwd) {
 		super();
 		this.id = id;
