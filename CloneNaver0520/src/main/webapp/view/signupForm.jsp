@@ -190,7 +190,7 @@ h6{
 	<form>
 	<!-- 네이버 로고 -->
 		<div id="header">	
-			<a href="#"><img src="../img/naverlogo.png" width="300px"></a>
+			<a href="homepage.jsp"><img src="../img/naverlogo.png" width="300px"></a>
 		</div>
 		
 		<div id="content">

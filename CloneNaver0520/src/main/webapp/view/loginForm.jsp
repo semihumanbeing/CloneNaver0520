@@ -5,26 +5,65 @@
 <head>
 <meta charset="UTF-8">
 <title>네이버 : 로그인</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link rel="stylesheet" href="../css/loginForm.css">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript">
 	function check(f) {
 		let id = f.id.value.trim();
 		let pwd = f.pwd.value.trim();
 
 		if (id == '') {
-			alert('아이디는 필수입력입니다.');
-			f.id.focus();
+			Swal.fire({
+			  title:'아이디는 필수입력입니다.',
+			  icon: 'error',
+			  didClose: () =>{
+				  f.id.value='';
+				  f.id.focus();
+			  }
+			})
 			return;
 		}
 		if (pwd == '') {
-			alert('비밀번호는 필수입력입니다.');
-			f.pwd.focus();
+			Swal.fire({
+			  title:'비밀번호는 필수입력입니다.',
+			  icon: 'error',
+			  didClose: () =>{
+				  f.pwd.value='';
+				  f.pwd.focus();
+			  }
+			})
 			return;
 		}
+		// 로그인 가능여부 확인하기
+		
+		$.ajax({
+			url:'logincheck.do',
+			data: {
+				'id':id,
+				'pwd':pwd	
+			},
+			dataType:'json',
+			success: function(result){
+				if(result.result == true){
+					location.href="mainpage.jsp";
+				} else if(result.result == false){
+					Swal.fire({
+						  title:'아이디 혹은 비밀번호가<br>틀렸습니다!',
+						  icon: 'error'
+						})
+						return;
+				}
+				
+			},
+			error:function(err){
+				alert(err.responseText);
+			}
+			
+		});
 
-		f.method = "GET";
-		f.action = "login.do"
-		f.submit();
+		
 
 	}
 </script>
@@ -47,7 +86,7 @@
 				</button>
 			</div>
 		</form>
-		
+
 	</div>
 </body>
 </html>
